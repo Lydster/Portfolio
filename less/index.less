@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    margin: 0 auto;
+    width: 70%;
+    background-color: white;
+    font-family: 'PT Sans', sans-serif;
+    .stationary {
+        width: 45%;
+        height: 100%;
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px;
+        img {
+            width: 160px;
+            height: 160px;
+            border: 2px solid #eee;
+            border-radius: 100px;
+            object-fit: cover;
+        }
+        h4 {
+            width: 200px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            align-content: space-between;
+            flex-direction: column;
+            .tab {
+                border: 1px solid #eee;
+                cursor: pointer;
+                width: 160px;
+                height: 30px;
+                border-radius: 20px;
+                padding: 5px;
+                margin: 5px;
+                text-align: center;
+                &:hover {
+                    background-color: #eee;
+                }
+            }
+            .active-tab {
+                background-color: lightcoral;
+                color: white;
+                border: 2px solid #eee;
+              }
+        }
+    }
+    .card-container {
+        width: 100%;
+        flex-grow: 5;
+        overflow: auto;
+        border-left: 3px dotted #eee;
+        .card {
+            border-bottom: 3px dotted #eee;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            width: 650px;
+            .explaination {
+                padding: 30px 0;
+            }
+            .card-img {
+                border: 1px solid #eee;
+            }
+            a {
+                text-decoration: none;
+            }
+        }
+        
+    }
+}
+

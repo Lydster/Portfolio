@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  /* remove scrollbar space */
+  background: transparent;
+  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+.wrapper {
+  display: flex;
+  height: 100vh;
+  margin: 0 auto;
+  width: 70%;
+  background-color: white;
+  font-family: 'PT Sans', sans-serif;
+}
+.wrapper .stationary {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+.wrapper .stationary img {
+  width: 160px;
+  height: 160px;
+  border: 2px solid #eee;
+  border-radius: 100px;
+  object-fit: cover;
+}
+.wrapper .stationary h4 {
+  width: 200px;
+}
+.wrapper .stationary .tabs {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-between;
+  flex-direction: column;
+}
+.wrapper .stationary .tabs .tab {
+  border: 1px solid #eee;
+  cursor: pointer;
+  width: 160px;
+  height: 30px;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+.wrapper .stationary .tabs .tab:hover {
+  background-color: #eee;
+}
+.wrapper .stationary .tabs .active-tab {
+  background-color: lightcoral;
+  color: white;
+  border: 2px solid #eee;
+}
+.wrapper .card-container {
+  width: 100%;
+  flex-grow: 5;
+  overflow: auto;
+  border-left: 3px dotted #eee;
+}
+.wrapper .card-container .card {
+  border-bottom: 3px dotted #eee;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+}
+.wrapper .card-container .card .explaination {
+  padding: 30px 0;
+}
+.wrapper .card-container .card .card-img {
+  border: 1px solid #eee;
+}
+.wrapper .card-container .card a {
+  text-decoration: none;
+}
