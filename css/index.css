@@ -38,6 +38,7 @@ html {
   align-items: center;
   flex-direction: column;
   margin: 20px;
+  z-index: 1;
 }
 @media (max-width: 1200px) {
   .wrapper .stationary {
