@@ -50,7 +50,7 @@ html {
   border-radius: 100px;
   object-fit: cover;
 }
-@media (max-width: 500px) {
+@media (max-width: 300px) {
   .wrapper .stationary img {
     display: none;
   }
