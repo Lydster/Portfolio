@@ -108,9 +108,6 @@ html {
   margin: 5px;
   text-align: center;
 }
-.wrapper .stationary .tabs .tab:hover {
-  background-color: #eee;
-}
 .wrapper .stationary .tabs .active-tab {
   background-color: lightcoral;
   color: white;
