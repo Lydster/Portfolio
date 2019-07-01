@@ -15,9 +15,8 @@ html {
 ::-webkit-scrollbar-thumb {
   background: white;
 }
-
-@phone: ~"(max-width: 500px)";
 @tablet: ~"(max-width: 1200px)";
+@phone: ~"(max-width: 500px)";
 
 .wrapper {
   display: flex;
@@ -42,12 +41,6 @@ html {
     margin: 20px;
     z-index: 1;
     @media @tablet {
-      width: 100%;
-      height: none;
-      flex-grow: none;
-      margin-bottom: 10px;
-    }
-    @media @phone {
       display: none;
     }
 
@@ -58,13 +51,22 @@ html {
       border-radius: 100px;
       object-fit: cover;
     }
+    @media @tablet {
+      display: none;
+    }
 
     h4 {
       width: 200px;
     }
+    @media @tablet {
+      display: none;
+    }
     .profile-links {
       display: flex;
       margin: 5px;
+    }
+    @media @tablet {
+      display: none;
     }
     .fab {
       color: black;
@@ -114,6 +116,8 @@ html {
     border-left: 3px dotted #eee;
     @media @tablet {
       border-left: none;
+      flex-grow: none;
+      overflow: none;
     }
     .card {
       border-bottom: 3px dotted #eee;
