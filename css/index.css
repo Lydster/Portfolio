@@ -5,6 +5,9 @@ html {
   overflow: scroll;
   overflow-x: hidden;
 }
+@media (max-width: 1200px) {
+  overflow: none;
+}
 ::-webkit-scrollbar {
   width: 0px;
   /* remove scrollbar space */
@@ -31,7 +34,6 @@ html {
 }
 .wrapper .stationary {
   width: 45%;
-  height: 100%;
   display: flex;
   flex-grow: 1;
   justify-content: center;
@@ -42,6 +44,8 @@ html {
 @media (max-width: 1200px) {
   .wrapper .stationary {
     width: 100%;
+    height: none;
+    flex-grow: none;
   }
 }
 .wrapper .stationary .profile-img {
@@ -128,6 +132,9 @@ html {
     width: 100%;
     padding: 5px;
   }
+}
+.wrapper .card-container .card p {
+  text-align: left;
 }
 @media (max-width: 1200px) {
   .wrapper .card-container .card .video {
