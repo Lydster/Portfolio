@@ -15,7 +15,7 @@ html {
   background: white;
 }
 
-@phone: ~"(max-width: 300px)";
+@phone: ~"(max-width: 400px)";
 @tablet: ~"(max-width: 1200px)";
 
 .wrapper {
@@ -27,6 +27,7 @@ html {
   font-family: "PT Sans", sans-serif;
   @media @tablet {
     flex-direction: column;
+    text-align: center;
   }
   .stationary {
     width: 45%;
@@ -41,7 +42,7 @@ html {
       width: 100%;
     }
 
-    img {
+    .profile-img {
       width: 180px;
       height: 180px;
       border: 2px solid #eee;
@@ -49,9 +50,7 @@ html {
       object-fit: cover;
     }
     @media @phone {
-      img {
-        display: none;
-      }
+      display: none;
     }
     h4 {
       width: 200px;
@@ -117,6 +116,12 @@ html {
       width: 650px;
       @media @tablet {
         width: 100%;
+        padding: 5px;
+      }
+      .video {
+        @media @tablet {
+          width: 100%;
+        }
       }
       img {
         @media @tablet {

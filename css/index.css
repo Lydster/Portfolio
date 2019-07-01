@@ -26,6 +26,7 @@ html {
 @media (max-width: 1200px) {
   .wrapper {
     flex-direction: column;
+    text-align: center;
   }
 }
 .wrapper .stationary {
@@ -43,15 +44,15 @@ html {
     width: 100%;
   }
 }
-.wrapper .stationary img {
+.wrapper .stationary .profile-img {
   width: 180px;
   height: 180px;
   border: 2px solid #eee;
   border-radius: 100px;
   object-fit: cover;
 }
-@media (max-width: 300px) {
-  .wrapper .stationary img {
+@media (max-width: 400px) {
+  .wrapper .stationary {
     display: none;
   }
 }
@@ -124,6 +125,12 @@ html {
 }
 @media (max-width: 1200px) {
   .wrapper .card-container .card {
+    width: 100%;
+    padding: 5px;
+  }
+}
+@media (max-width: 1200px) {
+  .wrapper .card-container .card .video {
     width: 100%;
   }
 }
