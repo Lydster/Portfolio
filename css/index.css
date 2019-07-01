@@ -13,7 +13,7 @@ html {
 }
 /* optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-  background: #FF0000;
+  background: white;
 }
 .wrapper {
   display: flex;
@@ -21,7 +21,12 @@ html {
   margin: 0 auto;
   width: 70%;
   background-color: white;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
+}
+@media (max-width: 1200px) {
+  .wrapper {
+    flex-direction: column;
+  }
 }
 .wrapper .stationary {
   width: 45%;
@@ -33,21 +38,53 @@ html {
   flex-direction: column;
   margin: 20px;
 }
+@media (max-width: 1200px) {
+  .wrapper .stationary {
+    width: 100%;
+  }
+}
 .wrapper .stationary img {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   border: 2px solid #eee;
   border-radius: 100px;
   object-fit: cover;
 }
+@media (max-width: 500px) {
+  .wrapper .stationary img {
+    display: none;
+  }
+}
 .wrapper .stationary h4 {
   width: 200px;
+}
+.wrapper .stationary .profile-links {
+  display: flex;
+  margin: 5px;
+}
+.wrapper .stationary .fab {
+  color: black;
+  margin: 5px;
+}
+.wrapper .stationary .far {
+  color: black;
+  margin: 5px;
+}
+@media (max-width: 1200px) {
+  .wrapper .stationary .skills {
+    display: none;
+  }
 }
 .wrapper .stationary .tabs {
   display: flex;
   justify-content: space-around;
   align-content: space-between;
   flex-direction: column;
+}
+@media (max-width: 1200px) {
+  .wrapper .stationary .tabs {
+    display: none;
+  }
 }
 .wrapper .stationary .tabs .tab {
   border: 1px solid #eee;
@@ -73,12 +110,27 @@ html {
   overflow: auto;
   border-left: 3px dotted #eee;
 }
+@media (max-width: 1200px) {
+  .wrapper .card-container {
+    border-left: none;
+  }
+}
 .wrapper .card-container .card {
   border-bottom: 3px dotted #eee;
   padding: 30px;
   display: flex;
   flex-direction: column;
   width: 650px;
+}
+@media (max-width: 1200px) {
+  .wrapper .card-container .card {
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .wrapper .card-container .card img {
+    width: 100%;
+  }
 }
 .wrapper .card-container .card .explaination {
   padding: 30px 0;
@@ -88,4 +140,5 @@ html {
 }
 .wrapper .card-container .card a {
   text-decoration: none;
+  color: black;
 }
