@@ -1,15 +1,10 @@
 * {
   box-sizing: border-box;
 }
-@phone: ~"(max-width: 400px)";
-@tablet: ~"(max-width: 1200px)";
 
 html {
   overflow: scroll;
   overflow-x: hidden;
-}
-@media @tablet {
-  overflow: none;
 }
 
 ::-webkit-scrollbar {
@@ -21,6 +16,9 @@ html {
   background: white;
 }
 
+@phone: ~"(max-width: 500px)";
+@tablet: ~"(max-width: 1200px)";
+
 .wrapper {
   display: flex;
   height: 100vh;
@@ -31,7 +29,7 @@ html {
   @media @tablet {
     flex-direction: column;
     text-align: center;
-    margin: 30px;
+    margin: 0 auto;
   }
   .stationary {
     width: 45%;
@@ -48,6 +46,9 @@ html {
       flex-grow: none;
       margin-bottom: 10px;
     }
+    @media @phone {
+      display: none;
+    }
 
     .profile-img {
       width: 180px;
@@ -56,9 +57,7 @@ html {
       border-radius: 100px;
       object-fit: cover;
     }
-    @media @phone {
-      display: none;
-    }
+
     h4 {
       width: 200px;
     }

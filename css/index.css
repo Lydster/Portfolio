@@ -5,9 +5,6 @@ html {
   overflow: scroll;
   overflow-x: hidden;
 }
-@media (max-width: 1200px) {
-  overflow: none;
-}
 ::-webkit-scrollbar {
   width: 0px;
   /* remove scrollbar space */
@@ -30,6 +27,7 @@ html {
   .wrapper {
     flex-direction: column;
     text-align: center;
+    margin: 0 auto;
   }
 }
 .wrapper .stationary {
@@ -46,6 +44,12 @@ html {
     width: 100%;
     height: none;
     flex-grow: none;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .wrapper .stationary {
+    display: none;
   }
 }
 .wrapper .stationary .profile-img {
@@ -54,11 +58,6 @@ html {
   border: 2px solid #eee;
   border-radius: 100px;
   object-fit: cover;
-}
-@media (max-width: 400px) {
-  .wrapper .stationary {
-    display: none;
-  }
 }
 .wrapper .stationary h4 {
   width: 200px;
